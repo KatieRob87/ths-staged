@@ -1,0 +1,238 @@
+// bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+
+@import "partials/variables.scss";
+
+
+.check-list{
+
+  ul{
+    padding:0;
+    li{
+      list-style-type:none;
+      color:$type;
+      font-size:20px;
+      line-height:40px;
+
+      &:before{
+        content:'\f14a';
+        font-family:FontAwesome;
+        color:darken($main-glow, 7%);
+        padding-right:15px;
+
+      }
+    }
+  }
+}
+
+.strap{
+position:absolute;
+top:40%;
+width:100%;
+
+h1{
+text-align:center;
+color:#fff;
+font-size:30px;
+font-weight:200;
+text-shadow: 2px 2px 5px #444;
+
+span{
+  font-weight:500;
+}
+
+}
+
+}
+
+.welcome {
+  background: $main-glow;
+  position: relative;
+  z-index: 1;
+  margin-top:-5px;
+
+
+
+
+  h2{
+  color: $main-color;
+  font-weight:200;
+  padding:20px 0 30px;
+  }
+
+  h3{
+    @extend h2;
+  }
+
+  span{
+    font-weight:500;
+  }
+
+  p{
+    color:$type;
+    font-weight:100;
+    font-size:18px;
+    line-height:31px;
+  }
+}
+.welcome:after {
+  background: inherit;
+  top: 0px;
+  content: '';
+  display: block;
+  height: 150%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(7deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.why {
+@extend .welcome;
+}
+.why:after {
+  transform: skewY(-7deg);
+    transform-origin: 0%;
+     bottom: 50px;
+}
+
+
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+    position:relative;
+}
+
+      a{
+        color:$main-color;
+        outline:none;
+      }
+
+      .form-control {
+        background-color:$form-back;
+        border:1px solid;
+        border-color:darken($form-back, 5%);
+        border-radius:0;
+        font-size:13px;
+        color:#111;
+        padding:15px 20px;
+
+        &:focus{
+          box-shadow:none;
+          border:1px solid;
+          border-color:darken($form-back, 5%);
+          background-color:$form-back;
+          border-right:none;
+        }
+
+      }
+
+
+      #custom-search-input{
+        .btn{
+          background-color:transparent;
+        }
+
+.input-group-btn{
+
+.btn{
+        background-color:$form-back;
+        border:1px solid;
+        border-color:darken($form-back, 5%);
+        border-radius:0;
+        border-left:none;
+        margin-left:-2px;
+
+        &:focus{
+          box-shadow:none;
+        }
+}  
+
+        .fa-search{
+          color:#111;
+        }
+      }
+
+      }
+
+.nav-link{
+  padding:13px
+}
+.nav-item{
+
+  .fa-twitter{
+    color:$twitter;
+  }
+
+    .fa-facebook{
+    color:$facebook;
+  }
+
+  .logo{
+    img{
+      width:140px;
+      margin-right:20px;
+    }
+  }
+
+  .btn{
+    background-color:transparent;
+    padding:15px;
+    color:$main-color;
+
+    &:focus{
+      box-shadow:none;
+    }
+  }
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 1rem;
+  border-bottom: 10px solid $main-glow;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+
+
+
+
+
