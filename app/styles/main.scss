@@ -5,6 +5,196 @@
 @import "partials/variables.scss";
 
 
+.foot-list{
+
+  ul{
+    text-indent:none;
+    padding:0;
+    li{
+      color:$main-color;
+      list-style-type:none;
+      line-height:40px;
+    }
+  }
+}
+.news{
+  margin:150px 0 0;
+  padding:150px 0;
+  border-top:1px solid;
+  border-color:lighten($type, 50%);
+
+
+.col-md-4{
+  float:left;
+}
+
+
+
+  h2{
+  color: $main-color;
+  font-weight:200;
+  padding:20px 0 30px;
+  }
+
+  h3{
+    @extend h2;
+  }
+
+  span{
+    font-weight:500;
+  }
+
+  p{
+    color:$main-color;
+    font-weight:100;
+    font-size:18px;
+    line-height:31px;
+  }
+
+
+}
+
+
+
+.cta{
+  float:left;
+  margin:50px 20px 0 0;
+
+  a{
+    clear:both;
+    color:$glow-dark;
+    border:3px solid;
+    border-color:$glow-dark;
+    padding:20px;
+
+    &:hover{
+          color:$main-glow;
+          border-color:$main-glow;
+          text-decoration:none;
+
+    }
+  }
+}
+
+.info-section{
+  padding:40px 0 30px;
+
+
+  img{
+
+-webkit-clip-path: polygon(0 0, 100% 0%, 100% 82%, 0% 100%);
+clip-path: polygon(0 0, 100% 0%, 100% 82%, 0% 100%);
+  }
+}
+
+.fab-icons{
+  z-index:500;
+  margin-top:30px;
+
+
+  .fab{
+
+    float:left;
+    position:relative;
+
+    h4{
+    width:100%;
+    position:absolute;
+    color:$white;
+    z-index:600;
+    top:40%;
+    left:4%;
+    right:0%;
+    text-align:center;
+
+    }
+
+        img{ 
+-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.first{
+  margin:0;
+  img{
+-webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  }
+}
+
+.last{
+  margin:0;
+  img{
+-webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+  }
+}
+
+
+.header{
+  margin:0 -15px;
+}
+
+.banner{
+  margin:0 -15px;
+}
+
+.icon-banner{
+  @extend .banner;
+    margin-top:-50px;
+
+.parallax-window {
+    min-height: 550px;
+  }
+
+.banner-copy{
+    position:absolute;
+right:8%;
+  top:38%;
+  padding-right:200px;
+  padding-left:15px;
+
+h3{
+  color:$white;
+  font-weight:200;
+
+  span{
+    font-weight:500;
+  }
+}
+
+h6{
+  font-size:20px;
+  color:$white;
+  line-height:40px;
+  font-weight:200;
+
+
+  i{
+    color:$glow-dark;
+    padding-right:15px;
+  }
+}
+
+p{
+color:$white;
+}
+
+}
+
+}
+
+
+
+.ruled{
+  border-left:1px solid;
+  border-color:lighten($type, 50%);
+  padding-left:100px;
+}
+
 .check-list{
 
   ul{
@@ -18,7 +208,7 @@
       &:before{
         content:'\f14a';
         font-family:FontAwesome;
-        color:darken($main-glow, 7%);
+        color:$glow-dark;
         padding-right:15px;
 
       }
@@ -47,13 +237,25 @@ span{
 }
 
 .welcome {
-  background: $main-glow;
+  background: $white;
   position: relative;
   z-index: 1;
   margin-top:-5px;
+  padding:0 0 0 200px;
 
+  .foot-list{
 
+    img{
+margin-bottom:30px;
+    }
+      p{
 
+    line-height:15px;
+    color:$main-color;
+    font-size:16px;
+    font-weight:500;
+  }
+  }
 
   h2{
   color: $main-color;
@@ -63,6 +265,11 @@ span{
 
   h3{
     @extend h2;
+  }
+
+  h6{
+    @extend h2;
+    text-align:center;
   }
 
   span{
@@ -90,14 +297,222 @@ span{
   z-index: -1;
 }
 
+
+
+.client {
+@extend .welcome;
+background: $main-color;
+padding:20px 0 20px 200px;
+  z-index:2;
+
+  h3{
+    color:$white;
+  }
+    p{
+    color:$white;
+    width:50%;
+  }
+
+&:before{
+    background: inherit;
+  top: 0px;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-7deg);
+  transform-origin: 100%;
+  z-index: -1;
+
+}
+
+}
+.client:after {
+  height: 100%;
+}
+
+.accredit{
+  @extend .client;
+  background: $glow-dark;
+
+}
+
+.contact{
+  @extend .client;
+  background: $white;
+
+    padding:270px 200px 0 200px;
+  z-index:1;
+
+
+
+  .form-control{
+    margin-top:10px;
+  }
+
+  .cta{
+    float:right;
+    margin-right:0;
+  }
+
+  h3{
+    color:$glow-dark;
+  }
+
+.info{
+
+  padding:20px 50px 30px 50px;
+    h4{
+    color:$main-color;
+    font-size:20px;
+    font-weight:600;
+  }
+
+  p{
+    color:$type;
+    font-size:17px;
+    width:100%;
+  }
+
+}
+
+
+
+}
+
+.product{
+  @extend .welcome;
+  background:$white;
+    padding:0 200px 0 200px;
+    margin:-15px;
+    h2{
+  color: $main-color;
+}
+
+  p{
+    color:$type;
+    }
+
+&:before {
+  background: $white;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 20%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-7deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+}
+
+.product:after {
+  height: 100%;
+}
+
+.feature{
+@extend .icon-banner;
+ .parallax-window {
+    min-height: 700px;
+  } 
+
+.video{
+position:absolute;
+right:20%;
+top:35%;
+
+  h3{
+  font-weight:200;
+  color:$white;
+  position:relative;
+
+  &:after{
+    content:'\f144';
+    font-family:FontAwesome;
+      font-size:170px;
+right:15%;
+top:100%;
+  position:absolute;
+
+  }
+
+
+  span{
+    font-weight:500;
+  }
+
+}
+}
+
+  .banner-copy{
+    position:absolute;
+  left:30%;
+  top:40%;
+text-align:center;
+
+
+}
+
+  h4{
+font-size:40px;
+color:$white;
+font-weight:400;
+
+&:before{
+  content:'\f10d';
+  font-family:FontAwesome;
+  padding-right:30px;
+  font-size:50px;
+}
+
+&:after{
+  content:'\f10e';
+  font-family:FontAwesome;
+  padding-left:30px;
+  font-size:50px;
+}
+  }
+
+  h5{
+font-size:15px;
+color:$white;
+  }
+
+}
+
+
+
 .why {
 @extend .welcome;
+  padding:0 200px 0 150px;
 }
 .why:after {
   transform: skewY(-7deg);
     transform-origin: 0%;
      bottom: 50px;
 }
+
+.about {
+
+@extend .why;
+    background: $white;
+  padding:0 200px 0 200px;
+  margin-top:100px;
+}
+
+.about:after {
+  transform: skewY(-7deg);
+transform-origin: -10%;
+    background: $white;
+  z-index:-5;
+}
+
+
 
 
 
@@ -226,9 +641,14 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 1.5rem;
-  color: #777;
-  border-top: .05rem solid #e5e5e5;
+  padding: 50px;
+  margin:50px 0 0;
+  text-align:center;
+  color: $white;
+font-weight:100;
+  z-index:100000000;
+  background:$main-color;
+
 }
 
 
